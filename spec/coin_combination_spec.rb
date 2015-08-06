@@ -19,8 +19,4 @@ describe('Fixnum#change') do
      expect(167.change).to(eq([6, 1, 1, 2]))
   end
 
-  it('sums up the array, shoves sum into last index of array') do
-    expect(167.change).to(eq([6, 1, 1, 2, 10]))
-  end
-
 end

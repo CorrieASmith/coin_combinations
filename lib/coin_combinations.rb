@@ -3,6 +3,7 @@ class Fixnum
       input = self
       coins =  [0, 0, 0, 0]  # [quarters, dimes, nickles, pennies]
 
+
       # quarters
       coins[0] = input./(25)
       remainder = input.%(25)  # w/input of 166, remainder = 16
@@ -14,7 +15,7 @@ class Fixnum
       # nickles
       coins[2] = remainder./(5)
       remainder = remainder.%(5)
-      
+
       # pennies
       coins[3] = remainder./(1)
       remainder = remainder.%(1)
