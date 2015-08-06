@@ -8,6 +8,6 @@ describe('the number converted to change', {:type => :feature}) do
     visit('/')
     fill_in('coin', :with => '100')
     click_button('Go!')
-    expect(page).to have_content('4 quarters')
+    expect(page).to have_content('Quarters')
   end
 end

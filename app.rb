@@ -1,16 +1,17 @@
 require('sinatra')
 require('sinatra/reloader')
-#require('./lib/coin_combination')
+require('./lib/coin_combinations')
+
 also_reload('lib/**/*.rb')
-# also_reload('views/layout.erb')
 
 get('/') do
   erb(:index)
 end
 
 get('/coin_combo') do
-  all_change = params.fetch('coin').coin_combo()
-  @coin = params.fetch('coin').coin_combo()
+  all_change = params.fetch('coin')  # Synatra ALWAYS returns a string
+  all_change = all_change.to_i.change()         # change string to integer
+  @coin = params.fetch('coin').to_i.change() # change string to integer
   @quarters = all_change[0]
   @dimes = all_change[1]
   @nickels = all_change[2]
