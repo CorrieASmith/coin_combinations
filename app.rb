@@ -11,7 +11,7 @@ end
 get('/coin_combo') do
   all_change = params.fetch('coin')  # Synatra ALWAYS returns a string
   all_change = all_change.to_i.change()         # change string to integer
-  @coin = params.fetch('coin').to_i.change() # change string to integer
+  @number = params.fetch('coin').to_i.change() # change string to integer
   @quarters = all_change[0]
   @dimes = all_change[1]
   @nickels = all_change[2]
