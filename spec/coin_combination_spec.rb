@@ -11,7 +11,12 @@ describe('Fixnum#change') do
     expect(160.change).to(eq([6, 1, 0, 0]))
   end
 
-  #it('takes remainder after dimes, then divides by nickels') do
-    #expect(165.change).to(eq([6, 1, 1, 0]))
-  #end
+  it('takes remainder after dimes, then divides by nickels') do
+    expect(165.change).to(eq([6, 1, 1, 0]))
+  end
+  #
+  # it('takes remainder after nickles, then divides by ones') do
+  #   expect(167.change).to(eq([6, 1, 1, 2]))
+  # end
+
 end
