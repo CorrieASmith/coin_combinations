@@ -13,7 +13,11 @@ class Fixnum
 
       # nickles
       coins[2] = remainder./(5)
-      remainder = remainder.%(5)   
+      remainder = remainder.%(5)
+      
+      # pennies
+      coins[3] = remainder./(1)
+      remainder = remainder.%(1)
 
       coins
   end
